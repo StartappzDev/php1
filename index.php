@@ -52,23 +52,48 @@
     $books = [
    ['name'=>'The Secret',
    'author'=>'Rhonda Bryne',
+    'release year'=>'2006',
    'url'=>'https://www.google.com/books/the-secret'
     ],
+    ['name'=>'The Answer',
+    'author'=>'Rhonda Bryne',
+     'release year'=>'2006',
+    'url'=>'https://www.google.com/books/the-answer'
+     ],
    ['name'=>'The Dark Marter',
    'author'=>'Marvel Comics',
+   'release year'=>'2023',
    'url'=>'https://www.marvel.com/comics/book/the-dark-marter'
     ],
    ['name'=>'The Hobbit',
    'author'=>'J.R.R. Tolkien',
+   'release year'=>'2018',
    'url'=>'https://www.j.r.t.olkien.com/the-hobbit/'
 ],
     ];
+    // Sort the books by release year in descending order
+    function filterByAuthor($books,$author){
+        $filteredBooks = [];
+        foreach($books as $book){
+            if($book['author'] === $author){
+                $filteredBooks[] = $book;
+            }
+        }
+
+        return $filteredBooks;
+
+    }
+    
     ?>
 <p>
-  <?php foreach($books as $book) : ?>
-    <li>
-        <?= $book['name']; ?></li>
+  <?php foreach(filterByAuthor($books,'Marvel Comics') as $book) : ?>
+   
+    <li> <a href="<?= $book['url']; ?>"><?= $book['name']; ?></a></li> 
+    <!-- <li>
+        <?= $book['name']; ?></li> -->
+   
   <?php endforeach;?>
+
 
 </body>
 </html>
