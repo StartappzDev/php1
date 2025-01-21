@@ -72,21 +72,22 @@
 ],
     ];
     // Sort the books by release year in descending order
-    function filterByAuthor($books,$author){
-        $filteredBooks = [];
-        foreach($books as $book){
-            if($book['author'] === $author){
-                $filteredBooks[] = $book;
+    function filter($items,$key, $value){
+        $filteredItems = [];
+        foreach($items as $book){
+            if($book[$key] === $value){
+                $filteredItems[] = $book;
             }
         }
 
-        return $filteredBooks;
+        return $filteredItems;
 
     }
+    $filteredBooks = filter($books,'author','Rhonda Bryne');
     
     ?>
 <p>
-  <?php foreach(filterByAuthor($books,'Marvel Comics') as $book) : ?>
+  <?php foreach($filteredBooks as $book) : ?>
    
     <li> <a href="<?= $book['url']; ?>"><?= $book['name']; ?></a></li> 
     <!-- <li>
