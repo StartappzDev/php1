@@ -13,7 +13,6 @@
     <h1><?= $message ?></h1>
     -->
 
-  <h1>Recommended Books</h1>
 
   <?php
     $books = [
