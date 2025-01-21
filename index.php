@@ -82,21 +82,25 @@
         ],
     ];
     // Sort the books by release year in descending order
-    function filterByAuthor($books, $author)
-    {
-        $filteredBooks = [];
-        foreach ($books as $book) {
-            if ($book['author'] === $author) {
-                $filteredBooks[] = $book;
-            }
-        }
+    // function filter($items, $fn)
+    // {
+    //     $filteredItems = [];
+    //     foreach ($items as $item) {
+    //         if ($fn($item)) {
+    //             $filteredItems[] = $item;
+    //         }
+    //     }
+    //     return $filteredItems;
+    // }
 
-        return $filteredBooks;
-    }
+
+    $filteredItems = array_filter($books, function ($book) {
+        return $book['release year'] > 2000;
+    });
 
     ?>
     <p>
-        <?php foreach (filterByAuthor($books, 'Marvel Comics') as $book) : ?>
+        <?php foreach ($filteredItems as $book) : ?>
 
             <li> <a href="<?= $book['url']; ?>"><?= $book['name']; ?></a></li>
             <!-- <li>
