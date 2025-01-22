@@ -1,6 +1,6 @@
   <!-- PHP Code Block Commented Out -->
   <!-- 
-    <?php
+  <?php
 //     $name = "Dark Marter";
 //     $read = true;
 
@@ -58,4 +58,4 @@
 //         return $book['release year'] > 2000;
 //     });
 
-    require 'index.view.php';
+    require 'contact.view.php';
