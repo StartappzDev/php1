@@ -1,54 +1,4 @@
-<!DOCTYPE html>
-  <html lang="en" class="h-full bg-gray-100>
-
-  <head>
-      <meta charset=" UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- <style>
-      body {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          color: black;
-          margin: 0;
-      }
-
-      ul {
-          list-style-type: none;
-          padding: 0;
-      }
-
-      li {
-          margin: 5px 0;
-      }
-
-      a {
-          text-decoration: none;
-          color: blue;
-      }
-
-      a:hover {
-          text-decoration: underline;
-      }
-  </style> -->
-  </head>
-
-  <body class="h-full">
-      <!--
-  This example requires updating your template:
-
-  ```
-  <html class=" h-full bg-gray-100">
-
-      <body class="h-full">
-          ```
-          -->
-      <div class="min-h-full">
-          <nav class="bg-gray-800">
+<nav class="bg-gray-800">
               <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                   <div class="flex h-16 items-center justify-between">
                       <div class="flex items-center">
@@ -157,23 +107,3 @@
                   </div>
               </div>
           </nav>
-
-          <header class="bg-white shadow">
-              <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                  <h1 class="text-3xl font-bold tracking-tight text-gray-900">Contact</h1>
-              </div>
-          </header>
-          <main>
-              <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-              <p>
-            Hey This is my Contact Page 
-           </p>
-              </div>
-          </main>
-      </div>
-
-
-
-  </body>
-
-  </html>
